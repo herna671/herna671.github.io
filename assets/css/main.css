@@ -2134,17 +2134,24 @@ input, select, textarea {
 			}
 
 		.image.avatar {
-			border-radius: 100%;
-		}
+    		border-radius: 8px; /* Esquinas sutilmente redondeadas */
+   			 overflow: hidden;    /* Asegura que la imagen no se salga de los bordes */
+   			 width: 120px;        /* Tamaño fijo para evitar deformaciones */
+    		height: 120px;
+    		margin: 0 auto 1.5em auto; /* Centrado */
+}
 
-			.image.avatar:before {
-				display: none;
-			}
+		.image.avatar:before {
+    		display: none;
+}
 
-			.image.avatar img {
-				border-radius: 50%;
-				width: 130%;
-			}
+		.image.avatar img {
+    		border-radius: 0;
+    		width: 100%;
+    		height: 100%;
+    		object-fit: cover;   /* Recorta la imagen proporcionalmente para que llene el cuadrado sin estirarse */
+}
+			
 
 /* List */
 
